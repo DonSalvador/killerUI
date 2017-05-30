@@ -1,0 +1,40 @@
+@mixin gradient-2($color1, $color2, $porcent1: 0%, $porcent2: 100%)
+  background: $color1
+  background: -moz-linear-gradient(top, $color1 $porcent1, $color2 $porcent2)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($porcent1,$color1), color-stop($porcent2,$color2))
+  background: -webkit-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: -o-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: -ms-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: linear-gradient(to bottom, $color1 $porcent1,$color2 $porcent2)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 )
+
+@mixin gradient-vertical-two-colors($color1, $color2, $porcent1: 0%, $porcent2: 100%)
+  background: $color1
+  background: -moz-linear-gradient(top, $color1 $porcent1, $color2 $porcent2)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($porcent1,$color1), color-stop($porcent2,$color2))
+  background: -webkit-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: -o-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: -ms-linear-gradient(top, $color1 $porcent1,$color2 $porcent2)
+  background: linear-gradient(to bottom, $color1 $porcent1,$color2 $porcent2)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 )
+
+@mixin gradient-horizontal-two-colors($color1, $color2, $porcent1: 0%, $porcent2: 100%)
+  background: $color1
+  background: -moz-linear-gradient(left, $color1 $porcent1, $color2 $porcent2)
+  background: -webkit-gradient(linear, left top, right top, color-stop($porcent1,$color1), color-stop($porcent2,$color2))
+  background: -webkit-linear-gradient(left, $color1 $porcent1,$color2 $porcent2)
+  background: -o-linear-gradient(left, $color1 $porcent1,$color2 $porcent2)
+  background: -ms-linear-gradient(left, $color1 $porcent1,$color2 $porcent2)
+  background: linear-gradient(to right, $color1 $porcent1,$color2 $porcent2)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=1 )
+
+
+@mixin gradient-3($color1, $color2, $color3, $porcent1: 0%, $porcent2: 50%, $porcent3: 100%)
+  background: $color1
+  background: -moz-linear-gradient(top, $color1 $porcent1, $color2 $porcent2, $color3 $porcent3)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop($porcent1,$color1), color-stop($porcent2,$color2), color-stop($porcent3,$color3))
+  background: -webkit-linear-gradient(top, $color1 $porcent1,$color2 $porcent2,$color3 $porcent3)
+  background: -o-linear-gradient(top, $color1 $porcent1,$color2 $porcent2,$color3 $porcent3)
+  background: -ms-linear-gradient(top, $color1 $porcent1,$color2 $porcent2,$color3 $porcent3)
+  background: linear-gradient(to bottom, $color1 $porcent1,$color2 $porcent2,$color3 $porcent3)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 )

@@ -1,0 +1,9 @@
+@mixin vertical-center($position: false)
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  
+  @if ($position == 'right')
+    > *
+      &:first-child
+        margin-left: auto !important

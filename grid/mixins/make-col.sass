@@ -1,0 +1,46 @@
+// Function to generate the grid by columns
+// @mixin makeCol($col)
+//   @for $i from 1 through 12
+//       .grid > .col-#{$i}
+//         flex-basis: $col-#{$i}
+//         max-width: $col-#{$i}
+
+// Function to generate the grid by columns
+@mixin makeCol($col)
+  [class*='grid']
+    > [class*="#{$col}-1"]
+      flex-basis: $col-1
+      max-width: $col-1
+    > [class*="#{$col}-2"]
+      flex-basis: $col-2
+      max-width: $col-2
+    > [class*="#{$col}-3"]
+      flex-basis: $col-3
+      max-width: $col-3
+    > [class*="#{$col}-4"]
+      flex-basis: $col-4
+      max-width: $col-4
+    > [class*="#{$col}-5"]
+      flex-basis: $col-5
+      max-width: $col-5
+    > [class*="#{$col}-6"]
+      flex-basis: $col-6
+      max-width: $col-6
+    > [class*="#{$col}-7"]
+      flex-basis: $col-7
+      max-width: $col-7
+    > [class*="#{$col}-8"]
+      flex-basis: $col-8
+      max-width: $col-8
+    > [class*="#{$col}-9"]
+      flex-basis: $col-9
+      max-width: $col-9
+    > [class*="#{$col}-10"]
+      flex-basis: $col-10
+      max-width: $col-10
+    > [class*="#{$col}-11"]
+      flex-basis: $col-11
+      max-width: $col-11
+    > [class*="#{$col}-12"]
+      flex-basis: $col-12
+      max-width: $col-12

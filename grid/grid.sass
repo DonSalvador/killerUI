@@ -1,0 +1,141 @@
+@import 'vars'
+
+@mixin grid($breakpoints: $breakpoints, $gutter: $gutter)
+
+  $breakpoints: reverse($breakpoints)
+
+  [class*='grid'],
+  .grid
+    box-sizing: border-box
+    display: flex
+    flex-flow: row wrap
+    margin: (-$gutter / 2)
+
+  .col,
+  [class*='col-']
+    box-sizing: border-box
+    flex: 0 0 auto
+    padding: ($gutter / 2)
+
+  .col
+    flex: 1 1 0
+
+  .grid .col,
+  .grid[class*='']
+    margin: 0
+    padding: 0
+
+
+  //************************
+  //    HELPERS SUFFIXES
+  //************************
+
+  // FOR GRID
+  [class*='grid-'],
+  .grid
+    // No spacing between cols : noGutter
+    &[class*='-noGutter'],
+    &.no-gutter
+      margin: 0
+
+      > [class*='col']
+        padding: 0
+
+    // No Wrapping
+    &[class*='noWrap']
+      flex-wrap: nowrap
+
+    // Horizontal alignment
+    &[class*='-center'],
+    &.center
+      justify-content: center
+
+    &[class*='-right'],
+    .right
+      justify-content: flex-end
+      // align-self: flex-end
+      margin-left: auto
+
+    // Vertical alignment
+    &[class*='-top'],
+    .top
+      align-items: flex-start
+
+    &[class*='-middle'],
+    .middle
+      align-items: center
+
+    &[class*='-bottom'],
+    .bottom
+      align-items: flex-end
+
+
+    // Orders
+    &[class*='-reverse'],
+    .reverse
+      flex-direction: row-reverse
+
+    &[class*='-column'],
+    .column
+      flex-direction: column
+
+      > [class*='col-']
+        flex-basis: auto
+
+    &[class*='-column-reverse'],
+    .column-reverse
+      flex-direction: column-reverse
+
+    // Spaces between and around cols
+    &[class*='-spaceBetween'],
+    .space-between
+      justify-content: space-between
+
+    &[class*='-spaceAround'],
+    .space-around
+      justify-content: space-around
+
+
+    // Equal heights columns
+    &[class*='-equalHeight'] > [class*='col'],
+    .space-around > [class*='col']
+      display: flex
+
+    // Removes the padding-bottom
+    &[class*='-noBottom'] > [class*='col'],
+    .no-bottom > [class*='col']
+      padding-bottom: 0
+
+  // FOR COL
+  [class*='col-'],
+  .col
+    &[class*='-top'],
+    .top
+      align-self: flex-start
+    &[class*='-middle'],
+    .middle
+      align-self: center
+    &[class*='-bottom'],
+    .bottom
+      align-self: flex-end
+    &[class*='-first'],
+    .first
+      order: -1
+    &[class*='-last'],
+    .last
+      order: 1
+
+  // GRID BY NUMBER
+  @include gridByNumber(grid)
+  @each $size in $breakpoints
+    @media screen and (max-width: nth($size, 2))
+      @include gridByNumber('_' + nth($size, 1))
+
+  // COLS SIZES
+  @include makeCol(col)
+  @include makeOff(off)
+  @each $size in $breakpoints
+    @media screen and (max-width: nth($size, 2))
+      $_size: '_' + nth($size, 1)
+      @include makeCol($_size)
+      @include makeOff($_size)
