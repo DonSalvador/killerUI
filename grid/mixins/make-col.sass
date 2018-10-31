@@ -44,3 +44,27 @@
     > [class*="#{$col}-12"]
       flex-basis: $col-12
       max-width: $col-12
+
+// @mixin makeHideCol($col)
+//   @each $size in $breakpoints
+//     @media screen and (max-width: nth($size, 2))
+//       @include gridByNumber('_' + nth($size, 1))
+
+// $beakpoints: (xs 568px, sm 768px, md 1024px, lg 1920px, xl 3200px);
+// @each $key, $value in $beakpoints {
+//   $i: index($beakpoints, $key);
+//   .#{$i}-hide {
+
+//     display: none;
+//   }
+// }
+
+//   $beakpoints: (xs 568px, sm 768px, md 1024px, lg 1920px, xl 3200px);
+// @for $i from 1 through length($beakpoints) {
+//     $index: nth($beakpoints, $i);
+//     @if $index == 1 {
+//       .ok {
+//         display: none;
+//       }
+//     }
+// }
