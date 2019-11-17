@@ -18,7 +18,7 @@
   background: linear-gradient(to bottom, $color1 $percent1,$color2 $percent2)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}',GradientType=0 )
 
-@mixin gradient-horizontal-two-colors($color1, $color2, $porcent1: 0%, $porcent2: 100%)
+@mixin gradient-horizontal-two-colors($color1, $color2, $percent1: 0%, $percent2: 100%)
   background: $color1
   background: -moz-linear-gradient(left, $color1 $percent1, $color2 $percent2)
   background: -webkit-gradient(linear, left top, right top, color-stop($percent1,$color1), color-stop($percent2,$color2))
