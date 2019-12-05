@@ -14,7 +14,7 @@
     ]
   ],
   "_from": "../../../code/killerui",
-  "_id": "killerui@1.0.1",
+  "_id": "killerui@1.0.2",
   "_inCache": true,
   "_location": "/killerui",
   "_phantomChildren": {},
@@ -48,5 +48,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
