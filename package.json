@@ -1,40 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "/Users/massimo/code/killerui",
-        "scope": null,
-        "escapedName": null,
-        "name": null,
-        "rawSpec": "/Users/massimo/code/killerui",
-        "spec": "/Users/massimo/code/killerui",
-        "type": "directory"
-      },
-      "/Users/massimo/Code/myghostmarket/admin"
-    ]
-  ],
-  "_from": "../../../code/killerui",
-  "_id": "killerui@1.0.2",
-  "_inCache": true,
-  "_location": "/killerui",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "/Users/massimo/code/killerui",
-    "scope": null,
-    "escapedName": null,
-    "name": null,
-    "rawSpec": "/Users/massimo/code/killerui",
-    "spec": "/Users/massimo/code/killerui",
-    "type": "directory"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "file:../../../code/killerui",
-  "_shasum": "40928fd2df29fa9e253f63ee12985966e6e128f1",
-  "_shrinkwrap": null,
-  "_spec": "/Users/massimo/code/killerui",
-  "_where": "/Users/massimo/Code/myghostmarket/admin",
   "author": "",
   "dependencies": {},
   "description": "A simple and cool sass framework",
@@ -48,5 +12,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

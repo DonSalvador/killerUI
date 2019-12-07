@@ -1,11 +1,3 @@
-// Function to generate the offset
-// @mixin makeOff($off)
-//   @for $i from 0 through 12
-//       .grid > .col-#{$i}
-//         flex-basis: $col-#{$i}
-//         max-width: $col-#{$i}
-
-
 @mixin makeOff($off)
   [class*="grid"]
     > [push-left*="#{$off}-0"]
