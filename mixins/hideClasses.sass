@@ -12,7 +12,7 @@
         @media (max-width: $size)
           display: none !important
       @else if($i == length($breakpoints))
-        @media (min-width: ($size + 1) + 'px')
+        @media (min-width: ($size + 1))
           display: none !important
       @else
         $keys: map_keys($breakpoints)
