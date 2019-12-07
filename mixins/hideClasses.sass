@@ -1,23 +1,22 @@
 @mixin hideClasses($breakpoints)
-
   @each $breakpoint, $size in $breakpoints
-  .hide-up-to-#{$breakpoint}
-    @media (max-width: $size)
-      display: none
-  .hide-from-#{$breakpoint}
-    @media (min-width: $size)
-      display: none
-  $i: index($breakpoints, ($breakpoint $size))
-  .hide-#{$breakpoint}
-    @if($i == 1)
+    .hide-up-to-#{$breakpoint}
       @media (max-width: $size)
-        display: none !important
-    @else if($i == length($breakpoints))
-      @media (min-width: ($size + 1) + 'px')
-        display: none !important
-    @else
-      $keys: map_keys($breakpoints)
-      $key: nth($keys, $i - 1)
-      $minWith: map-get($breakpoints, $key)
-      @media (min-width: ($minWith + 1)) and (max-width: $size)
-        display: none !important
+        display: none
+    .hide-from-#{$breakpoint}
+      @media (min-width: $size)
+        display: none
+    $i: index($breakpoints, ($breakpoint $size))
+    .hide-#{$breakpoint}
+      @if($i == 1)
+        @media (max-width: $size)
+          display: none !important
+      @else if($i == length($breakpoints))
+        @media (min-width: ($size + 1) + 'px')
+          display: none !important
+      @else
+        $keys: map_keys($breakpoints)
+        $key: nth($keys, $i - 1)
+        $minWith: map-get($breakpoints, $key)
+        @media (min-width: ($minWith + 1)) and (max-width: $size)
+          display: none !important
