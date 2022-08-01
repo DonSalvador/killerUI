@@ -9,13 +9,13 @@
     box-sizing: border-box
     display: flex
     flex-flow: row wrap
-    margin: 0 (-$gutter / 2)
+    margin: 0 calc(-$gutter / 2)
 
   .col,
   [class*='col-']
     box-sizing: border-box
     flex: 0 0 auto
-    padding: ($gutter / 2)
+    padding: calc($gutter / 2)
 
   .col
     flex: 1 1 0
@@ -139,3 +139,7 @@
       $_size: '_' + nth($size, 1)
       @include makeCol($_size)
       @include makeOff($_size)
+
+  // HIDE COLS
+  @include hideClasses($_size)
+
